@@ -5,3 +5,5 @@ def getRandomNumber(lowest, highest):
 
 randnum = getRandomNumber(1, 100)
 print(getRandomNumber(1, 100))
+
+guess = input('Guess: ')
