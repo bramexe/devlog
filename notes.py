@@ -1,5 +1,7 @@
 import json
 
+class EmptyNoteError(Exception): pass
+
 with open("notes.json", "r+", encoding="utf-8") as notes_file:
     try:
         data = json.load(notes_file)
@@ -19,5 +21,5 @@ with open("notes.json", "r+", encoding="utf-8") as notes_file:
                 print(e)
         else:
             print('Already saved that')
-
-
+    else:
+        raise EmptyNoteError('Empty note')
